@@ -16,8 +16,8 @@ import twitter  #to let us make calls to the Twitter API
 
 #---Variables you will need to setup for your application:
 #See http://developer.aerohive.com and navigate to 'My Applications'
-clientID = "YOUR-CLIENT-ID"
-clientSecret = "YOUR-CLIENT-SECRET"
+clientID = "19a087a8"
+clientSecret = "daffa2ecd066ef09da98e4527749dee2"
 redirectURL = "https://mysite.com"
 
 #-----------------------------------------------------------------------
@@ -45,8 +45,8 @@ minuetsOfData = 5
 # These are the headers we will use to interact with the APIs. Authorization will need to be updated with the access token.
 headers= {'Authorization':'Bearer ', 'X-AH-API-CLIENT-ID':clientID, 'X-AH-API-CLIENT-SECRET':clientSecret, 'X-AH-API-CLIENT-REDIRECT-URI':redirectURL}
 #locationFolder = 5433133630928 # 330
-hostToTrack = 'DanielsiPhone5S'
-locationFolder = 5433134309401
+hostToTrack = 'xxxxxxxxx'
+locationFolder = 123456789
 #------------------------------------------------------------------
 
 
@@ -59,14 +59,14 @@ print "This application will poll the monitoring API for a client, and notify yo
 #---Prompt user for input:
 print "We need your VHM ID and access token to fetch data from your Hive Manager instance."
 print "For information on how to get yours, look here: https://developer.aerohive.com/docs/authentication\n\n\n"
-print "VHM informaiton can be obtained from NG's About section."
+print "VHM information can be obtained from NG's About section."
 ownerID = raw_input('Please enter your VHM: ')
 accessToken = raw_input('Please enter your Access Token: ')
 headers["Authorization"] = "Bearer "+accessToken
 #minutesToTrackLocationFor = int(raw_input('How many minutes should this run? '))
 #secondsToWaitBetweenRequests = int(raw_input('Seconds to wait between updates: '))
 
-print "I want to be able to send you a message on Twitter when something happens."
+print "\nI want to be able to send you a message on Twitter when something happens."
 userTwitterName = raw_input("What is your Twitter handle? ")
 
 print "Please make sure the device to track is connected to your network."
